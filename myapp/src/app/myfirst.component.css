@@ -1,0 +1,6 @@
+.box {
+    background: chartreuse;
+    box-shadow: 5px 10px #CCCCCC;
+    height: 100px;
+    width: 200px;
+}
