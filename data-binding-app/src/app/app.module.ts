@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
 import { MatButtonModule, MatCardModule, MatInputModule } from '@angular/material';
+import { PropertyBindingComponent } from './property-binding/property-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StringInterpolationComponent
+    StringInterpolationComponent,
+    PropertyBindingComponent
   ],
   imports: [
     BrowserModule,
