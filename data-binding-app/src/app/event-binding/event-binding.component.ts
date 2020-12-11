@@ -8,23 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class EventBindingComponent implements OnInit {
 
   buttonEnabled: boolean = true;
-  buttonName: string = 'My Button';
+  selectEnabled: boolean = false;
 
-  spinnerMode: string = 'determinate';
   i: number = 0;
+  selectedOption: number = 1;
+
+  buttonName: string = 'My Button';
+  spinnerMode: string = 'determinate';
   
   constructor() { }
 
   ngOnInit() {
   }
 
-  save() {
-    console.log('Save!');
-  }
-
-  increment() {
-    this.i++;
-    this.buttonName = `Fui clicado ${this.i} vezes`;
+  check(event) {
+    this.selectEnabled = event.checked;
   }
 
   disable() {
@@ -34,5 +32,18 @@ export class EventBindingComponent implements OnInit {
       this.buttonEnabled = true;
       this.spinnerMode = 'determinate';
     }, 3000);
+  }
+
+  increment() {
+    this.i++;
+    this.buttonName = `Fui clicado ${this.i} vezes`;
+  }
+
+  save() {
+    console.log('Save!');
+  }
+
+  selectionChange(event) {
+    this.selectedOption = event.value;
   }
 }
