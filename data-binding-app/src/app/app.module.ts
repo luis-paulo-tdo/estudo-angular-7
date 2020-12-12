@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
-import { MatButtonModule, MatCardModule, MatCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatCheckboxModule, MatDividerModule } from '@angular/material';
 import { MatInputModule, MatProgressSpinnerModule, MatSelectModule } from '@angular/material';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
@@ -22,6 +22,7 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
     MatButtonModule,
     MatCardModule,
     MatCheckboxModule,
+    MatDividerModule,
     MatInputModule,
     MatProgressSpinnerModule,
     MatSelectModule

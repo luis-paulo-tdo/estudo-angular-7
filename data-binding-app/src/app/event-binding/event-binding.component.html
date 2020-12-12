@@ -23,7 +23,6 @@
         <p>
           <mat-checkbox color="warn" (change)="check($event)">Disable / Enable</mat-checkbox>
         </p>
-
         <mat-form-field>
           <mat-select matNativeControl required [disabled]="!selectEnabled" (selectionChange)="selectionChange($event)">
             <mat-option value="1">Volvo</mat-option>
@@ -35,6 +34,23 @@
       </mat-card-content>
       <mat-card-actions>
         <p>Selected option {{selectedOption}}</p>
+      </mat-card-actions>
+    </mat-card>
+  </p>
+</section>
+
+<mat-divider></mat-divider>
+
+<section>
+  <p>
+    <mat-card>
+      <mat-card-content>
+        <mat-form-field>
+          <input matInput placeholder="First name" [value]="inputName" (input)="inputName = $event.target.value">
+        </mat-form-field>
+      </mat-card-content>
+      <mat-card-actions>
+        Name: {{inputName}}
       </mat-card-actions>
     </mat-card>
   </p>

@@ -14,6 +14,7 @@ export class EventBindingComponent implements OnInit {
   selectedOption: number = 1;
 
   buttonName: string = 'My Button';
+  inputName: string = 'Luis';
   spinnerMode: string = 'determinate';
   
   constructor() { }
