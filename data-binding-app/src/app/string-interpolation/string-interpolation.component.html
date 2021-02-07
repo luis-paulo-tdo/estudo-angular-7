@@ -1,0 +1,24 @@
+<mat-card class="person-card">
+
+  <mat-card-header>
+    <mat-card-title>Person Data</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p>Name: {{person.firstName}} {{person.lastName}}</p>
+    <p>Age: {{person.age}}</p>
+    <p>Band: {{person.band}}</p>
+
+    <form>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Name" value="{{person.firstName}} {{person.lastName}}">
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+
+</mat-card>
