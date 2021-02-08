@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCardModule, MatInputModule, MatProgressSpinnerModule } from '@angular/material';
+
+import { MatButtonModule, MatCardModule, MatCheckboxModule, MatDividerModule } from '@angular/material';
+import { MatInputModule, MatProgressSpinnerModule, MatSelectModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
-import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { PropertyBindingComponent } from './property-binding/property-binding.component';
+import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,11 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
     BrowserModule,
     MatButtonModule,
     MatCardModule,
+    MatCheckboxModule,
+    MatDividerModule,
     MatInputModule,
     MatProgressSpinnerModule,
+    MatSelectModule,
     NoopAnimationsModule
   ],
   providers: [],

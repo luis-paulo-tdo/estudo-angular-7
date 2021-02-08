@@ -11,7 +11,10 @@ export class EventBindingComponent implements OnInit {
   btnCountTitle = this.btnCountName;
   btnCountValue = 0;
   btnsEnable = true;
+  inputValue = 'Lemmy';
   progressSpinnerMode = 'determinate';
+  selectEnabled = false;
+  selectOption = 1;
   
   constructor() { }
 
@@ -30,5 +33,17 @@ export class EventBindingComponent implements OnInit {
       this.btnsEnable = true;
       this.progressSpinnerMode = 'determinate';
     }, 3000);
+  }
+
+  changeCbx(event) {
+    this.selectEnabled = event.checked;
+  }
+
+  changeSelect(event) {
+    this.selectOption = event.value;
+  }
+
+  input(event) {
+    console.log(event.target.value);
   }
 }
