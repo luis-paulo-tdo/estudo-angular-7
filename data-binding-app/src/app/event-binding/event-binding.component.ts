@@ -42,8 +42,4 @@ export class EventBindingComponent implements OnInit {
   changeSelect(event) {
     this.selectOption = event.value;
   }
-
-  input(event) {
-    console.log(event.target.value);
-  }
 }

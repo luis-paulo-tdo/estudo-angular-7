@@ -52,11 +52,11 @@
     <mat-card>
       <mat-card-content>
         <mat-form-field>
-          <input matInput placeholder="Name" [value]="inputValue" (input)="input($event)">
+          <input matInput placeholder="Name" [value]="inputValue" (input)="inputValue = $event.target.value">
         </mat-form-field>
       </mat-card-content>
-
       <mat-card-actions>
+        Name: {{inputValue}}
       </mat-card-actions>
     </mat-card>
   </section>
