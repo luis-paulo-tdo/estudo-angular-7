@@ -1,0 +1,17 @@
+<div class="margin">
+  
+  <h2>Event Binding:</h2>
+  
+  <section>
+    <h4>Count Event</h4>
+    <button mat-button color="warn" (click)="clickCountBtn()">{{btnCountName}} {{btnCountValue}}</button>
+  </section>
+
+  <section>
+    <h4>Spinner Event</h4>
+    <button mat-button color="primary" [disabled]='!btnsEnable'>Button #1</button>
+    <button mat-button color="warn" [disabled]='!btnsEnable'>Button #2</button>
+    <button mat-button color="warn" [disabled]='!btnsEnable' (click)="clickDisableBtn()">Disable Button</button>
+    <mat-progress-spinner color="primary" [value]="btnCountValue" [mode]="progressSpinnerMode"></mat-progress-spinner>
+  </section>
+</div>
