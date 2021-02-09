@@ -1,0 +1,18 @@
+<section>
+  <mat-card>
+    <mat-card-content>
+      <form>
+        <mat-form-field style="width: 100%;">
+          <input matInput name="first-name" placeholder="Enter your name" [(ngModel)]="firstNameInputValue">
+        </mat-form-field>
+        <mat-form-field style="width: 100%;">
+          <input matInput name="second-name" placeholder="Enter your name" [(ngModel)]="secondNameInputValue">
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <p>{{firstNameInputValue}}</p>
+      <p>{{secondNameInputValue}}</p>
+    </mat-card-actions>
+  </mat-card>
+</section>
