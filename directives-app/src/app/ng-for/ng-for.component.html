@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-content>
+    <mat-selection-list #selections>
+      <mat-list-option *ngFor="let album of albums; let i = index">[#{{i + 1}}] {{album}}</mat-list-option>
+    </mat-selection-list>
+  </mat-card-content>
+  <mat-card-footer>
+    <p>
+      Selected Albums: {{selections.selectedOptions.selected.length}}
+    </p>
+  </mat-card-footer>
+</mat-card>
