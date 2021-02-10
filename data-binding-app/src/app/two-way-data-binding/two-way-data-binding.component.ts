@@ -10,6 +10,13 @@ export class TwoWayDataBindingComponent implements OnInit {
   firstNameInputValue = '';
   secondNameInputValue = '';
 
+  person = {
+    firstName: 'Lemmy',
+    lastName: 'Kilmister',
+    address: 'England',
+    age: 70
+  };
+
   constructor() { }
 
   ngOnInit() {

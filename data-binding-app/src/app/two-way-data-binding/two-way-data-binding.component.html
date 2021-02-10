@@ -16,3 +16,34 @@
     </mat-card-actions>
   </mat-card>
 </section>
+
+<mat-divider></mat-divider>
+
+<section>
+  <mat-card>
+    <mat-card-title>
+      Person
+    </mat-card-title>
+    <mat-card-content>
+      <form>
+        <mat-form-field style="width: 100%;">
+          <input matInput name="first-name" name='first-name' placeholder="First Name" [(ngModel)]="person.firstName">
+        </mat-form-field>
+        <mat-form-field style="width: 100%;">
+          <input matInput name="second-name" name='last-name' placeholder="Last Name" [(ngModel)]="person.lastName">
+        </mat-form-field>
+        <mat-form-field style="width: 100%;">
+          <input matInput name="first-name" name='address' placeholder="Address" [(ngModel)]="person.address">
+        </mat-form-field>
+        <mat-form-field style="width: 100%;">
+          <input matInput name="first-name" name='age' placeholder="Age" [(ngModel)]="person.age">
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <p>Name: {{person.firstName}} {{person.lastName}}</p>
+      <p>Address: {{person.address}}</p>
+      <p>Age: {{person.age}}</p>
+    </mat-card-actions>
+  </mat-card>
+</section>
