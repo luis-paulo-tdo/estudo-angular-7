@@ -1,0 +1,31 @@
+.class-one {
+    background-color: blueviolet;
+    color: limegreen;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.class-two {
+    background-color: aqua;
+    color: coral;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.class-three {
+    background-color: darkorange;
+    color: deeppink;
+    font-size: 10px;
+    padding: 20px;
+}
+
+.class-four {
+    background-color: indigo;
+    color: dodgerblue;
+    font-size: 24px;
+    padding: 5px;
+}
+
+mat-card-footer {
+    margin-left: 3px;
+}
