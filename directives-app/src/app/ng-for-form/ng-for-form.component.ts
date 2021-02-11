@@ -35,7 +35,6 @@ export class NgForFormComponent implements OnInit {
       instrument: this.instrument,
       age: this.age
     });
-    console.log(this.artists);
   }
 
   cancel() {
@@ -43,5 +42,9 @@ export class NgForFormComponent implements OnInit {
     this.band = '';
     this.instrument = '';
     this.age = 0;
+  }
+
+  delete(index) {
+    this.artists.splice(index, 1);
   }
 }

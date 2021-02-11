@@ -31,3 +31,26 @@
     <button mat-raised-button color="warn" (click)="cancel()">Cancel</button>
   </mat-card-actions>
 </mat-card>
+
+<mat-card *ngIf="artists.length > 0">
+  <mat-card-content>
+    <section>
+      <mat-list>
+        <h3 matHeader>Artists</h3>
+        <mat-divider></mat-divider>
+        <mat-list-item *ngFor="let artist of artists; let i = index">
+          <mat-icon matListIcon>person</mat-icon>
+          <h2 matLine>Name: {{artist.name}}</h2>
+          <h2 matLine>Band: {{artist.band}}</h2>
+          <h2 matLine>Instrument: {{artist.instrument}}</h2>
+          <h2 matLine>Age: {{artist.age}}</h2>
+          <button mat-icon-button color="accent" (click)="delete(i)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-list-item>
+      </mat-list>
+    </section>
+  </mat-card-content>
+  <mat-card-actions>
+  </mat-card-actions>
+</mat-card>
