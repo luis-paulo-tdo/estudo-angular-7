@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
-import { MatCardModule, MatCheckboxModule, MatInputModule, MatListModule, MatRadioModule, MatSelectModule } from '@angular/material';
+import { MatCardModule, MatCheckboxModule, MatDividerModule, MatIconModule, MatInputModule } from '@angular/material';
+import { MatListModule, MatRadioModule, MatSelectModule } from '@angular/material';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
@@ -25,6 +26,8 @@ import { NgForComponent } from './ng-for/ng-for.component';
     FormsModule,
     MatCardModule,
     MatCheckboxModule,
+    MatDividerModule,
+    MatIconModule,
     MatInputModule,
     MatListModule,
     MatRadioModule,
