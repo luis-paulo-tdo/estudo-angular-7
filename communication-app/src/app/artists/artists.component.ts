@@ -22,4 +22,13 @@ export class ArtistsComponent implements OnInit {
     this.name = '';
     this.age = 0;
   }
+
+  update(artist: Artist, index: number) {
+    this.artists[index].name = artist.name;
+    this.artists[index].age = artist.age;
+  }
+
+  remove(index: number) {
+    this.artists.splice(index, 1);
+  }
 }

@@ -1,6 +1,6 @@
 <mat-card>
   <mat-card-content>
-    <section>
+    <section *ngIf="onEdit">
       <mat-form-field>
         <input matInput name="name" placeholder="Name" [(ngModel)]="name">
       </mat-form-field>
@@ -11,9 +11,15 @@
         <mat-icon>check</mat-icon>
       </button>
     </section>
+
+    <section *ngIf="!onEdit">
+      {{artist.name}} ({{artist.age}} years)
+      <button mat-icon-button color="primary" (click)="edit()">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" (click)="remove()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </section>
   </mat-card-content>
 </mat-card>
-
-<communication-item-artist *ngFor="let artist of artists; let i = index" [artist]="artist"
-  (removeEvent)="remove(i)" (updateEvent)="update($event, i)">
-</communication-item-artist >

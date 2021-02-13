@@ -6,19 +6,22 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ArtistComponent } from './input-binding/artist/artist.component';
+import { ArtistsComponent } from './artists/artists.component';
 import { ChildItemComponent } from './event/child-item/child-item.component';
 import { EventComponent } from './event/event.component';
 import { InputBindingComponent } from './input-binding/input-binding.component';
-import { ArtistsComponent } from './artists/artists.component';
+import { ItemArtistComponent } from './artists/item-artist/item-artist.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ArtistComponent,
+    ArtistsComponent,
     ChildItemComponent,
     EventComponent,
     InputBindingComponent,
-    ArtistsComponent
+    ItemArtistComponent
   ],
   imports: [
     BrowserModule,
