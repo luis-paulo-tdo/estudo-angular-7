@@ -15,11 +15,7 @@ export class EventComponent implements OnInit {
   ngOnInit() {
   }
 
-  incBy(value: number) {
+  increment(value: number) {
     this.value += value;
-  }
-
-  decBy(value: number) {
-    this.value -= value;
   }
 }

@@ -2,9 +2,7 @@
   <mat-card-content>
     <section>
       <h3>Value: {{value}}</h3>
-      <communication-child-item [title]="title" (plusOne)="incBy(1)" (plusTwo)="incBy(2)"
-        (minusOne)="decBy(1)" (minusTwo)="decBy(2)">
-      </communication-child-item>
+      <communication-child-item [title]="title" (increment)="increment($event)"></communication-child-item>
     </section>
   </mat-card-content>
 </mat-card>
