@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-card-content>
+    <section>
+      <mat-form-field>
+        <input matInput name="name" placeholder="name" [(ngModel)]="name">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput name="age" placeholder="age" type="number" [(ngModel)]="age">
+      </mat-form-field>
+      <button mat-mini-fab color="primary" (click)="save()">
+        <mat-icon>check</mat-icon>
+      </button>
+    </section>
+  </mat-card-content>
+</mat-card>
+
+<p *ngFor="let artist of artists">{{artist.name}} ({{artist.age}} years)</p>
