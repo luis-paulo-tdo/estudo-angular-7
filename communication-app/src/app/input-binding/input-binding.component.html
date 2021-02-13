@@ -1,1 +1,8 @@
 <p>Name: {{firstName}} {{lastName}}</p>
+<p>Age: {{age}}</p>
+
+<h1>Artists</h1>
+<div *ngFor="let artist of artists">
+    <communication-artist [artist]="artist"></communication-artist>
+    <hr>
+</div>
