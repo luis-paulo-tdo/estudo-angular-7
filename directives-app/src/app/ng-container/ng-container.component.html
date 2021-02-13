@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-content>
+    <!--
+    <ul>
+      <ng-container *ngFor="let artist of artists">
+        <span *ngIf="artist.band == 'Judas Priest'">
+          {{artist.name}}
+        </span>
+      </ng-container>
+    </ul>
+    -->
+    <mat-list>
+      <h3 mat-subheader>Artists</h3>
+      <ng-container *ngFor="let artist of artists">
+        <mat-list-item *ngIf ="artist.band == 'Judas Priest'">
+          <mat-icon mat-list-icon>person</mat-icon>
+          <h4 mat-line>{{artist.name}}</h4>
+          <h4 mat-line>{{artist.band}}</h4>
+          <h4 mat-line>{{artist.lastLogin | date}}</h4>
+          <button mat-stroked-button color="primary">Save</button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </ng-container>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
