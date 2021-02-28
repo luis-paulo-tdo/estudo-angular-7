@@ -1,7 +1,7 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule } from '@angular/material';
+import { MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatProgressBarModule } from '@angular/material';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -11,6 +11,8 @@ import { ChildItemComponent } from './event/child-item/child-item.component';
 import { EventComponent } from './event/event.component';
 import { InputBindingComponent } from './input-binding/input-binding.component';
 import { ItemArtistComponent } from './artists/item-artist/item-artist.component';
+import { ParentChildComponent } from './parent-child/parent-child.component';
+import { TimerComponent } from './parent-child/timer/timer.component';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { ItemArtistComponent } from './artists/item-artist/item-artist.component
     ChildItemComponent,
     EventComponent,
     InputBindingComponent,
-    ItemArtistComponent
+    ItemArtistComponent,
+    ParentChildComponent,
+    TimerComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,8 @@ import { ItemArtistComponent } from './artists/item-artist/item-artist.component
     MatCardModule,
     MatFormFieldModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

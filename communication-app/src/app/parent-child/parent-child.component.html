@@ -1,0 +1,6 @@
+<div>
+  <button mat-button color="primary" (click)="timer.start()">Start</button>
+  <button mat-button color="accent" (click)="timer.stop()">Stop</button>
+  <button mat-button color="warn" (click)="timer.clear()">Clear</button>
+</div>
+<communication-timer #timer></communication-timer>
