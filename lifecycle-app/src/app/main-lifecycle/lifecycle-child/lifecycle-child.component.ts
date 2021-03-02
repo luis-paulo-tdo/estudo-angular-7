@@ -17,26 +17,39 @@ export class LifecycleChildComponent implements AfterContentInit, AfterViewInit,
   @Input() name: string;
 
   constructor() {
+    console.log('[Cons] Name:', this.name);
     this.newEvent('Cons');
   }
 
   ngOnInit() {
+    console.log('[Init] Name:', this.name);
     this.newEvent('Init');
   }
   
   ngAfterContentInit() {
+    console.log('[Acin] Name:', this.name);
     this.newEvent('Acin');
   }
 
   ngAfterViewInit() {
+    console.log('[Avin] Name:', this.name);
     this.newEvent('Avin');
   }
 
   ngOnChanges(changes: SimpleChanges) {
+    console.log('[Chng] Name:', this.name);
     this.newEvent('Chng');
+    for (let property in changes) {
+      if (!changes[property].firstChange) {
+        this.newEvent(`Changing ${property}: ${changes[property].previousValue} -> ${changes[property].currentValue}`);
+      } else {
+        this.newEvent(`New ${property}: ${changes[property].currentValue}`);
+      }
+    }
   }
 
   ngOnDestroy() {
+    console.log('[Dstr] Name:', this.name);
     this.newEvent('Dstr');
   }
 
