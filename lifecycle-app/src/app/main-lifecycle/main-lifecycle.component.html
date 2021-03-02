@@ -19,18 +19,29 @@
           </mat-option>
         </mat-select>
       </mat-form-field>
-
-      <button mat-icon-button color="primary">
+      <button mat-icon-button color="primary" (click)="save()">
         <mat-icon>check</mat-icon>
       </button>
-
       <button mat-icon-button color="primary">
         <mat-icon>refresh</mat-icon>
       </button>
     </section>
 
     <section>
-      
+      <mat-list>
+        <mat-list-item *ngFor="let artist of artists">
+          <mat-icon mat-list-icon>person</mat-icon>
+          <p mat-line>
+            <lifecycle-child [name]="artist.name" [age]="artist.age" [band]="artist.band"></lifecycle-child>
+          </p>
+          <button mat-icon-button color="warn">
+            <mat-icon>delete</mat-icon>
+          </button>
+          <button mat-icon-button color="primary">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </mat-list-item>
+      </mat-list>
     </section>
   </mat-card-content>
 </mat-card>

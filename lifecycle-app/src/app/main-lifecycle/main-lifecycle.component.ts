@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Artist } from '../artist';
 
 @Component({
   selector: 'lifecycle-main',
@@ -7,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainLifecycleComponent implements OnInit {
 
+  private age: number;
+  private band: string;
+  private name: string;
+  private edit: Artist = null;
+
+  private artists: Artist[] = [];
   private bands: string[] = ['Motörhead', 'Judas Priest', 'Megadeth'];
 
   constructor() { }
@@ -14,4 +21,9 @@ export class MainLifecycleComponent implements OnInit {
   ngOnInit() {
   }
 
+  save() {
+    if (this.edit == null) {
+      this.artists.push({ name: this.name, age: this.age, band: this.band });
+    }
+  }
 }
