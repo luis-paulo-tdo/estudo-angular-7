@@ -33,7 +33,9 @@
         <mat-list-item *ngFor="let artist of artists; let i = index">
           <mat-icon mat-list-icon>person</mat-icon>
           <p mat-line>
-            <lifecycle-child #child [name]="artist.name" [age]="artist.age" [band]="artist.band"></lifecycle-child>
+            <lifecycle-child #child [name]="artist.name" [age]="artist.age" [band]="artist.band">
+              [Number #{{randomNumber}}]
+            </lifecycle-child>
           </p>
           <p mat-line>
             <mat-chip-list>

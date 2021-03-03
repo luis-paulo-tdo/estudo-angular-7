@@ -12,13 +12,20 @@ export class MainLifecycleComponent implements OnInit {
   private band: string;
   private name: string;
   private edited: number = -1;
+  private randomNumber: number;
 
   private artists: Artist[] = [];
   private bands: string[] = ['Motörhead', 'Judas Priest', 'Megadeth'];
 
-  constructor() { }
+  constructor() {
+    this.generateRandomNumber();
+  }
 
   ngOnInit() {
+  }
+
+  generateRandomNumber() {
+    this.randomNumber = Math.round(Math.random() * 1000);
   }
 
   save() {

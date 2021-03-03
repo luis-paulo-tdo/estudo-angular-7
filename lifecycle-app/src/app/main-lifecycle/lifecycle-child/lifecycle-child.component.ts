@@ -17,27 +17,27 @@ export class LifecycleChildComponent implements AfterContentInit, AfterViewInit,
   @Input() name: string;
 
   constructor() {
-    console.log('[Cons] Name:', this.name);
+    console.log('[Chld.Cons] Name:', this.name);
     this.newEvent('Cons');
   }
 
   ngOnInit() {
-    console.log('[Init] Name:', this.name);
+    console.log('[Chld.Init] Name:', this.name);
     this.newEvent('Init');
   }
   
   ngAfterContentInit() {
-    console.log('[Acin] Name:', this.name);
+    console.log('[Chld.Acin] Name:', this.name);
     this.newEvent('Acin');
   }
 
   ngAfterViewInit() {
-    console.log('[Avin] Name:', this.name);
+    console.log('[Chld.Avin] Name:', this.name);
     this.newEvent('Avin');
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log('[Chng] Name:', this.name);
+    console.log('[Chld.Chng] Name:', this.name);
     this.newEvent('Chng');
     for (let property in changes) {
       if (!changes[property].firstChange) {
@@ -49,7 +49,7 @@ export class LifecycleChildComponent implements AfterContentInit, AfterViewInit,
   }
 
   ngOnDestroy() {
-    console.log('[Dstr] Name:', this.name);
+    console.log('[Chld.Dstr] Name:', this.name);
     this.newEvent('Dstr');
   }
 
