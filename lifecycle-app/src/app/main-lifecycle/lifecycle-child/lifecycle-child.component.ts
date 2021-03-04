@@ -10,6 +10,7 @@ export class LifecycleChildComponent implements AfterContentInit, AfterViewInit,
 
   public events: LifecycleEvent[] = [];
   private eventNextId: number = 0;
+  private intervalRef: NodeJS.Timer = null;
   private colors: string[] = ['accent', 'warn', 'primary'];
 
   @Input() age: number;
@@ -24,6 +25,7 @@ export class LifecycleChildComponent implements AfterContentInit, AfterViewInit,
   ngOnInit() {
     console.log('[Chld.Init] Name:', this.name);
     this.newEvent('Init');
+    this.intervalRef = setInterval(() => console.log(`[${this.name}] Plays ${this.band}`), 2000);
   }
   
   ngAfterContentInit() {
@@ -51,6 +53,7 @@ export class LifecycleChildComponent implements AfterContentInit, AfterViewInit,
   ngOnDestroy() {
     console.log('[Chld.Dstr] Name:', this.name);
     this.newEvent('Dstr');
+    clearInterval(this.intervalRef);
   }
 
   newEvent(name: string) {
