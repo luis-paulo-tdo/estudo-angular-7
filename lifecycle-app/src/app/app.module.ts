@@ -8,13 +8,17 @@ import { FormsModule } from '@angular/forms';
 import { MainLifecycleComponent } from './main-lifecycle/main-lifecycle.component';
 import { LifecycleChildComponent } from './main-lifecycle/lifecycle-child/lifecycle-child.component';
 import { ChildItemComponent } from './main-lifecycle/lifecycle-child/child-item/child-item.component';
+import { CheckComponent } from './check/check.component';
+import { CheckItemComponent } from './check/check-item/check-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainLifecycleComponent,
     LifecycleChildComponent,
-    ChildItemComponent
+    ChildItemComponent,
+    CheckComponent,
+    CheckItemComponent
   ],
   imports: [
     BrowserAnimationsModule,

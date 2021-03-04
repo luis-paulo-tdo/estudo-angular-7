@@ -1,0 +1,31 @@
+<mat-card>
+  <mat-card-content>
+    <section>
+
+      <mat-form-field class="form-field" style="width: 400px; padding-right: 20px;">
+        <input matInput placeholder="Name" [(ngModel)]="name">
+      </mat-form-field>
+
+      <mat-form-field class="form-field" style="width: 100px; padding-right: 20px;">
+        <input matInput placeholder="Age" [(ngModel)]="age">
+      </mat-form-field>
+
+      <button mat-icon-button color="primary">
+        <mat-icon>check</mat-icon>
+      </button>
+
+      <br><br>
+
+       <mat-slide-toggle #toggle>
+        Add Child Component
+      </mat-slide-toggle>
+
+      <br>
+      <mat-divider></mat-divider>
+      <br><br>
+
+      <lifecycle-check-item *ngIf="toggle.checked"></lifecycle-check-item>
+
+    </section>
+  </mat-card-content>
+</mat-card>
