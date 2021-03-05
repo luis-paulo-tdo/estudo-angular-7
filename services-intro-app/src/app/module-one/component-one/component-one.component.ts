@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceTwo } from 'src/app/service-two.service';
 import { ServiceOne } from '../service-one.service';
 
 @Component({
@@ -9,10 +10,15 @@ import { ServiceOne } from '../service-one.service';
 export class ComponentOneComponent implements OnInit {
 
   numberValue = 0;
+  serviceTwoName = '';
 
-  constructor(private serviceOne: ServiceOne) { }
+  constructor(
+    private serviceOne: ServiceOne,
+    private serviceTwo: ServiceTwo
+    ) { }
 
   ngOnInit() {
     this.numberValue = this.serviceOne.numberValue;
+    this.serviceTwoName = this.serviceTwo.name;
   }
 }
