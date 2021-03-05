@@ -1,0 +1,11 @@
+<div class="content">
+  <mat-slide-toggle #toggleOne>Component One</mat-slide-toggle><br>
+  <mat-slide-toggle #toggleTwo>Component Two</mat-slide-toggle><br>
+  <mat-slide-toggle #toggleThree>Component Three</mat-slide-toggle><br>
+  <mat-slide-toggle #toggleFour>Component Four</mat-slide-toggle><br>
+  
+  <services-intro-component-one *ngIf="toggleOne.checked"></services-intro-component-one>
+  <services-intro-component-two *ngIf="toggleTwo.checked"></services-intro-component-two>
+  <services-intro-component-three *ngIf="toggleThree.checked"></services-intro-component-three>
+  <services-intro-component-four *ngIf="toggleFour.checked"></services-intro-component-four>
+</div>
