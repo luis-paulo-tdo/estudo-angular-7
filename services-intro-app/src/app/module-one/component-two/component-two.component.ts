@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceOne } from '../service-one.service';
 
 @Component({
   selector: 'services-intro-component-two',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentTwoComponent implements OnInit {
 
-  constructor() { }
+  public numberValue: number = 0;
+
+  constructor(private serviceOne: ServiceOne) {
+    this.numberValue = this.serviceOne.numberValue;
+  }
 
   ngOnInit() {
   }
-
 }
