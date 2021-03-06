@@ -7,16 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormProductComponent } from './form-product/form-product.component';
-import { FormDepartmentComponent } from './form-department/form-department.component';
-import { TableProductComponent } from './table-product/table-product.component';
+import { DepartmentFormComponent } from './department-form/department-form.component';
+import { ProductFormComponent } from './product-form/product-form.component';
+import { ProductTableComponent } from './product-table/product-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormProductComponent,
-    FormDepartmentComponent,
-    TableProductComponent
+    DepartmentFormComponent,
+    ProductFormComponent,
+    ProductTableComponent
   ],
   imports: [
     AppRoutingModule,
