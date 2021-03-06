@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DepartmentFormComponent implements OnInit {
 
+  name: string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  save() {
+
+  }
+
+  clear() {
+    
+  }
 }
