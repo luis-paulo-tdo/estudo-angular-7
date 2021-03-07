@@ -19,13 +19,5 @@ export class ProductFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
-
-  save() {
-
-  }
-
-  clear() {
-
-  }
+  }  
 }
