@@ -16,12 +16,16 @@ export class DepartmentService {
 
   constructor() { }
 
+  get(): Department[] {
+    return this.departments;
+  }
+
+  getById(id: number): Department {
+    return this.departments.find(department => department.id === id);
+  }
+
   add(department: Department) {
     this.departments.push({ id: this.nextId++, ...department });
     console.log(this.departments);
-  }
-
-  get(): Department[] {
-    return this.departments;
   }
 }
