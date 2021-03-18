@@ -26,6 +26,5 @@ export class DepartmentService {
 
   add(department: Department) {
     this.departments.push({ id: this.nextId++, ...department });
-    console.log(this.departments);
   }
 }

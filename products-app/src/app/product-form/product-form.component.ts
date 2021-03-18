@@ -15,7 +15,6 @@ export class ProductFormComponent implements OnInit {
   description: string;
 
   department: Department;
-  departmentSelected: Department;
   departments: Department[];
 
   constructor(
@@ -33,7 +32,6 @@ export class ProductFormComponent implements OnInit {
       description: this.description,
       department: this.department
     });
-    console.log('Products:', this.productService.get());
     this.clear();
   }
 

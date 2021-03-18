@@ -12,7 +12,7 @@
     <div fxLayout="row" fxLayoutAlign="space-between start">
       <mat-form-field fxFlex="60">
         <mat-select placeholder="Department" [(ngModel)]="department">
-          <mat-option *ngFor="let department of departments" [value]="departmentSelected">{{department.name}}</mat-option>
+          <mat-option *ngFor="let department of departments" [value]="department">{{department.name}}</mat-option>
         </mat-select>
       </mat-form-field>
 

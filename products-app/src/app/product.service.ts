@@ -27,7 +27,7 @@ export class ProductService {
         name: product.name,
         description: product.description,
         price: product.price,
-        department: this.departmentService.getById(product.id)
+        department: this.departmentService.getById(product.departmentId)
       });
       this.nextId = product.id + 1;
     }
