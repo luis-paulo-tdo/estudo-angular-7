@@ -38,6 +38,6 @@ export class ProductService {
   }
 
   add(product: Product) {
-    this.products.push({ ...product, id: this.nextId + 1 });
+    this.products.push({ id: this.nextId + 1, ...product  });
   }
 }
