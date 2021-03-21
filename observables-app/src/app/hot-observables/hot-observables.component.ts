@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Observer, Subject } from 'rxjs';
+import { ConnectableObservable, Observable, Observer, Subject } from 'rxjs';
+import { publish, refCount } from 'rxjs/operators';
 
 @Component({
   selector: 'observables-hot-observables',
@@ -30,14 +31,27 @@ export class HotObservablesComponent implements OnInit {
         }, 1000);
       }
     );
-
-    this.useSubject();
+    this.usePublish();
   }
 
-  useSubject() {
+  private usePublish() {
+    const published: ConnectableObservable<number> = this.observable.pipe(publish()) as ConnectableObservable<number>;
+    published.connect();
+    this.createSubscriptions(published);
+  }
+
+  private usePublishReference() {
+    const published = this.observable.pipe(publish(), refCount());
+    this.createSubscriptions(published);
+  }
+
+  private useSubject() {
     const subject = new Subject<number>();
     this.observable.subscribe(subject);
+    this.createSubscriptions(subject);
+  }
 
+  private createSubscriptions(subject: Subject<any> | Observable<any>) {
     // Subscribe 1
     this.stringOne = 'Waiting for values...';
     setTimeout(() => {
