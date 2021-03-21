@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ConnectableObservable, Observable, Observer, Subject } from 'rxjs';
-import { publish, refCount } from 'rxjs/operators';
+import { publish, refCount, share } from 'rxjs/operators';
 
 @Component({
   selector: 'observables-hot-observables',
@@ -31,7 +31,12 @@ export class HotObservablesComponent implements OnInit {
         }, 1000);
       }
     );
-    this.usePublish();
+    this.useShare();
+  }
+
+  private useShare() {
+    const shared: ConnectableObservable<number> = this.observable.pipe(share()) as ConnectableObservable<number>;
+    this.createSubscriptions(shared);
   }
 
   private usePublish() {
