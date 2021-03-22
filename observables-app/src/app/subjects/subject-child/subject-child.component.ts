@@ -34,9 +34,10 @@ export class SubjectChildComponent implements OnInit {
   disconnect() {
     this.logs.push('Subject disconnected.');
     this.connected = false;
+    this.subscription.unsubscribe();
   }
 
   private log(data: DataModel) {
-    this.logs.push(`Timestamp: ${data.timestamp / 1000} | Data: ${data.value}`);
+    this.logs.push(`Data: ${data.value} | Time: ${(data.timestamp / 1000).toFixed(1)}s`);
   }
 }
