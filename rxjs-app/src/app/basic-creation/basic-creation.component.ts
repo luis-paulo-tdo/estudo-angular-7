@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { from, interval, Observable, Observer, of, Subscription, timer } from 'rxjs';
+import { from, fromEvent, interval, Observable, Observer, of, Subscription, timer } from 'rxjs';
 
 @Component({
   selector: 'rxjs-basic-creation',
@@ -63,6 +63,12 @@ export class BasicCreationComponent implements OnInit {
         console.log(value - elements.length);
       }
     });
+    this.subscription.add(subscription);
+  }
+
+  fromEventObservable() {
+    const observable = fromEvent(document, 'click');
+    const subscription = observable.subscribe(value => console.log(value));
     this.subscription.add(subscription);
   }
 
