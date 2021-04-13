@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { from, fromEvent } from 'rxjs';
-import { delay, map } from 'rxjs/operators';
+import { from, fromEvent, interval } from 'rxjs';
+import { delay, filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'rxjs-operators',
@@ -16,6 +16,8 @@ export class OperatorsComponent implements OnInit {
 
   mapOperator() {
     const observableFrom = from(['Using', 'Operator', 'map()', 'On', 'Observable']);
+    const observableFromEvent = fromEvent(document, 'click');
+
     observableFrom
     .pipe(
       map(value => value.toUpperCase()),
@@ -24,10 +26,26 @@ export class OperatorsComponent implements OnInit {
     )
     .subscribe(value => console.log(value));
 
-    const observableFromEvent = fromEvent(document, 'click');
     observableFromEvent
     .pipe(
       map((click: MouseEvent) => ({ x: click.screenX, y: click.screenY }))
+    )
+    .subscribe(value => console.log(value));
+  }
+
+  filterOperator() {
+    const observableFrom = from(['Using', 'Operator', 'map()', 'On', 'Observable']);
+    const observableInterval = interval(1000);
+
+    observableFrom
+    .pipe(
+      filter(value => value.includes('()'))
+    )
+    .subscribe(value => console.log(value));
+
+    observableInterval
+    .pipe(
+      filter(value => value % 2 === 0)
     )
     .subscribe(value => console.log(value));
   }
