@@ -1,0 +1,10 @@
+.debounce-area {
+    background-color: rgb(206, 206, 240);
+    border: 2px solid black;
+    bottom: 15%;
+    height: 70px;
+    left: 50%;
+    position: absolute;
+    right: 50%;
+    width: 70px;
+}
